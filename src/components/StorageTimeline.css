@@ -1,0 +1,88 @@
+.timeline-section-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.legend-pills {
+  display: flex;
+  gap: 12px;
+}
+
+.legend-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-pill.used { background: var(--accent-light); color: var(--accent); }
+.legend-pill.used .pill-dot { background: var(--accent); }
+
+.legend-pill.free { background: var(--green-bg); color: var(--green); }
+.legend-pill.free .pill-dot { background: var(--green); }
+
+.chart-wrapper {
+  margin-top: 0.5rem;
+}
+
+.timeline-tooltip {
+  background: white;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.tooltip-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tooltip-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+}
+
+.tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tooltip-name {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.tooltip-value {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-left: auto;
+}

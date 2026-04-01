@@ -1,0 +1,138 @@
+.drive-table-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.storage-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.storage-table th {
+  padding: 1rem 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface-2);
+}
+
+.storage-row {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.storage-row:last-child {
+  border-bottom: none;
+}
+
+.storage-row:hover {
+  background: var(--bg-surface-2);
+}
+
+.storage-table td {
+  padding: 1.125rem 1.25rem;
+  vertical-align: middle;
+}
+
+.volume-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.volume-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-surface-3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.volume-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.volume-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.volume-id {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.type-chip {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background: var(--bg-surface-3);
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.data-text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.used-val { color: var(--text-primary); }
+.total-val { color: var(--text-muted); font-weight: 500; }
+
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-surface-3);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pct-val {
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 32px;
+}
+
+.status-pill {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: inline-block;
+  white-space: nowrap;
+}

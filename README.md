@@ -1,0 +1,77 @@
+# README — Cloud Storage Monitoring Dashboard
+
+## 🚀 Overview
+A production-grade **real-time cloud storage monitoring dashboard** built with **React + Vite**. Monitor disk usage, storage utilization, and system metrics across local drives and cloud volumes from a single unified view.
+
+## ✨ Features
+- **6 live KPI cards** — Total Storage, Used/Free Space, IOPS, CPU, Active Alerts
+- **Donut chart** — Visual used vs. free storage breakdown with dynamic threshold coloring
+- **24-hour area timeline** — Storage utilization trend over the last day
+- **Drive table** — All 5 volumes (SSD, HDD, Cloud) with animated progress bars & status badges
+- **Alert feed** — Color-coded Critical/Warning/Info alerts with dismiss support
+- **System Metrics** — SVG CPU gauge, RAM progress bar, Network I/O bar chart, live IOPS counter
+- **Live polling** — Simulated REST API refreshes data every 5 seconds
+- **Fully responsive** — Works on mobile, tablet, and desktop
+
+## 🛠 Tech Stack
+| Technology | Purpose |
+|---|---|
+| React 18 + Vite | Framework + bundler |
+| Recharts | Area, Bar, Pie, Line charts |
+| Vanilla CSS | Styling with CSS Grid + Flexbox |
+| REST API (mock) | Simulated live metrics via `storageApi.js` |
+| Vercel | Deployment target |
+
+## 📁 Project Structure
+```
+cloud-storage-dashboard/
+├── src/
+│   ├── api/storageApi.js       ← Mock REST API (replace with real endpoints)
+│   ├── hooks/useStorageData.js ← Custom polling hook
+│   ├── components/
+│   │   ├── Header.jsx/css      ← Navigation + health status
+│   │   ├── MetricCard.jsx/css  ← KPI summary cards
+│   │   ├── DiskUsageChart.jsx/css  ← Donut chart
+│   │   ├── StorageTimeline.jsx/css ← 24h area chart
+│   │   ├── DriveTable.jsx/css  ← Per-drive volume table
+│   │   ├── AlertPanel.jsx/css  ← Alert feed with dismiss
+│   │   └── SystemMetrics.jsx/css   ← CPU/RAM/Network/IOPS
+│   ├── App.jsx / App.css       ← Layout + routing
+│   └── main.jsx / index.css    ← Entry point
+├── vercel.json                 ← Vercel SPA config
+└── index.html                  ← SEO meta tags
+```
+
+## 🏃 Local Development
+```bash
+npm install
+npm run dev
+# → http://localhost:5173
+```
+
+## 🌐 Deploy to Vercel
+```bash
+# Option 1: Vercel CLI
+npm install -g vercel
+vercel --prod
+
+# Option 2: GitHub → vercel.com → Import Repository
+# Framework: Vite | Build: npm run build | Output: dist
+```
+
+## 🔌 Connecting to a Real Backend
+Replace the mock functions in `src/api/storageApi.js` with real `fetch()` calls:
+
+```js
+export async function fetchStorageMetrics() {
+  const res = await fetch('https://your-api.com/api/metrics');
+  return res.json();
+}
+```
+
+## 📊 Resume Description
+> **Cloud Storage Monitoring Dashboard** | React, Recharts, REST API, CSS Grid, Vercel
+> - Built a real-time web dashboard to monitor disk usage, storage utilization, and system metrics across local and cloud volumes
+> - Integrated REST API polling (5s interval) to display live storage metrics with animated charts and data visualizations
+> - Implemented responsive dashboard layout using React, CSS Grid, and Flexbox; deployed to Vercel
+> - Displayed storage usage graphs, per-volume progress indicators, and severity-coded alert system using Recharts and custom CSS
