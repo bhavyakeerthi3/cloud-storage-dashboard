@@ -1,7 +1,7 @@
 # StorageOps — Cloud Storage Monitoring Dashboard
 
 ## 🚀 Live Demo
-**[Launch Application on Vercel](https://cloud-storage-dashboard-bhavyakeerthi3.vercel.app/)**
+**[Launch Application on Vercel](https://cloud-storage-dashboard-6hxs6s4jk.vercel.app/)**
 
 ## 📊 Overview
 A production-grade **real-time cloud storage monitoring dashboard** built with **React + Vite**. Monitor disk usage, storage utilization, and system metrics across local drives and cloud volumes from a single unified view.
